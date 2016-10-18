@@ -8,8 +8,20 @@
  *
  * @author shshunda
  */
+
+import java.util.*;
+import java.lang.reflect.*;
+
 public abstract class Inspector {
+    public Inspector() {        
+    }
     
     public abstract void inspect(Object obj, boolean recursive);
+    
+    // The assignment will constitute sets of methods which correspond to the
+    // requirements. For example, we are asked to get "the name of the declaring
+    // class." Rather than throwing a bunch of conditionals into the "inspect()"
+    // method, I will instead wrap around functions from the reflect library
+    // into smaller methods, and then add them to the "inspect()" method.
     
 }
