@@ -12,11 +12,14 @@
 import java.util.*;
 import java.lang.reflect.*;
 
-public abstract class Inspector {
+public class Inspector {
     public Inspector() {        
     }
     
-    public abstract void inspect(Object obj, boolean recursive);
+    public void inspect(Object obj, boolean recursive) {
+        Class underInspection = obj.getClass();
+        Class superClass = underInspection.getSuperclass();
+    }
     
     // The assignment will constitute sets of methods which correspond to the
     // requirements. For example, we are asked to get "the name of the declaring
@@ -26,7 +29,7 @@ public abstract class Inspector {
     
     // Another approach to this problem is to take the following pieces:
         // * Name of the declaring class [getDeclaringClass()]
-        // * Name of the immediate superclass 
+        // * Name of the immediate superclass [getSuperClass()]
         // And create conditions for them within "inspect()"
         // since they have direct method calls from the reflect library.
 }
