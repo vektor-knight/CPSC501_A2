@@ -55,5 +55,19 @@ public class InspectorTest {
         public void inspect(Object obj, boolean recursive) {
         }
     }
+
+    /**
+     * Test of interfaceNames method, of class Inspector.
+     */
+    @Test
+    public void testInterfaceNames() {
+        System.out.println("interfaceNames");
+        Object obj = null;
+        Class classObj = null;
+        Inspector instance = new Inspector();
+        instance.interfaceNames(obj, classObj);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }
