@@ -24,4 +24,9 @@ public abstract class Inspector {
     // method, I will instead wrap around functions from the reflect library
     // into smaller methods, and then add them to the "inspect()" method.
     
+    // Another approach to this problem is to take the following pieces:
+        // * Name of the declaring class [getDeclaringClass()]
+        // * Name of the immediate superclass 
+        // And create conditions for them within "inspect()"
+        // since they have direct method calls from the reflect library.
 }
