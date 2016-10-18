@@ -17,8 +17,8 @@ public class Inspector {
     }
     
     public void inspect(Object obj, boolean recursive) {
-        Class underInspection = obj.getClass();
-        Class superClass = underInspection.getSuperclass();
+        Class underInspection = obj.getClass(); 
+        Class superClass = underInspection.getSuperclass(); 
     }
     
     // The assignment will constitute sets of methods which correspond to the
@@ -32,4 +32,14 @@ public class Inspector {
         // * Name of the immediate superclass [getSuperClass()]
         // And create conditions for them within "inspect()"
         // since they have direct method calls from the reflect library.
+    
+    // Get the names of the interfaces (note: PLURAL!) the class implements
+    public void interfaceNames(Object obj, Class classObj) {
+        Class[] inf = classObj.getInterfaces();
+        if (inf.length > 0) { // interfaces were found
+            for (int i = 0; i < inf.length; i++) {
+                System.out.println("The name of the class's interfaces are: " + inf[i].getName());
+            }
+        }
+    }
 }
