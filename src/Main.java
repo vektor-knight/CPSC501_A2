@@ -10,6 +10,11 @@
  */
 public class Main {
     public static void main(String[] args) {
-    
+        Inspector testInspector = new Inspector();
+        Object obj = new ClassA();
+        Class<?> testClass = obj.getClass();
+        
+        testInspector.methodNames(obj, testClass);
+        
     }
 }
