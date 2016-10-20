@@ -17,6 +17,8 @@ public class Inspector {
     }
     
     public void inspect(Object obj, boolean recursive) {
+        // Before refactoring: these are polymorphic objects, 
+        // so an automatic "move method" could not be applied.
         Class underInspection = obj.getClass(); 
         Class superClass = underInspection.getSuperclass(); 
     }
