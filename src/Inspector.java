@@ -48,6 +48,7 @@ public class Inspector {
     /**
      * Gets the method names, exceptions, parameter types, return types, and modifiers
      * of one class.
+     * How do you test void methods with side effects?
      * @param obj
      * @param classObj 
      */
@@ -62,6 +63,8 @@ public class Inspector {
                 System.out.println("The return type(s) of this method: " + method.getReturnType());
                 System.out.println("The modifier(s) of this method: " + method.getModifiers());
             }
+        } else {
+            System.out.println("Methods not found");
         }
     }
 }
