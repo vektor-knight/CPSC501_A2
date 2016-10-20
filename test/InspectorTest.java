@@ -16,8 +16,14 @@ import static org.junit.Assert.*;
  * @author shshunda
  */
 public class InspectorTest {
+    Inspector testInspector;
+    Object obj;
+    Class testClass;
     
     public InspectorTest() {
+        testInspector = new Inspector();
+        obj = new ClassA();
+        testClass = obj.getClass();
     }
     
     @BeforeClass
@@ -61,13 +67,10 @@ public class InspectorTest {
      */
     @Test
     public void testInterfaceNames() {
-        System.out.println("interfaceNames");
-        Object obj = null;
-        Class classObj = null;
-        Inspector instance = new Inspector();
-        instance.interfaceNames(obj, classObj);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Testing the method interfaceNames");
+        Class[] interfaces = testClass.getInterfaces();
+        assertEquals(interfaces.length, 1);
+        assertEquals(interfaces[0].getSimpleName(), "InterfaceA");
     }
     
 }
