@@ -37,8 +37,8 @@ public class Inspector {
     public void interfaceNames(Object obj, Class classObj) {
         Class[] inf = classObj.getInterfaces();
         if (inf.length > 0) { // interfaces were found
-            for (int i = 0; i < inf.length; i++) {
-                System.out.println("The name of the class's interfaces are: " + inf[i].getName());
+            for (Class inf1 : inf) {
+                System.out.println("The name of the class's interfaces are: " + inf1.getName());
             }
         }
     }
