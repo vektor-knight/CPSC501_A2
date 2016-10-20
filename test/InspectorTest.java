@@ -16,6 +16,8 @@ import static org.junit.Assert.*;
  * @author shshunda
  */
 public class InspectorTest {
+    // Instances of the mock object to be
+    // used for testing
     Inspector testInspector;
     Object obj;
     Class testClass;
@@ -45,6 +47,7 @@ public class InspectorTest {
     /**
      * Test of inspect method, of class Inspector.
      */
+    /*
     @Test
     public void testInspect() {
         System.out.println("inspect");
@@ -54,7 +57,7 @@ public class InspectorTest {
         instance.inspect(obj, recursive);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
-    }
+    } */
 
     public class InspectorImpl extends Inspector {
 
@@ -64,6 +67,8 @@ public class InspectorTest {
 
     /**
      * Test of interfaceNames method, of class Inspector.
+     * Uses mock object to test if the interface name is being
+     * parsed correctly using reflective method calls.
      */
     @Test
     public void testInterfaceNames() {
