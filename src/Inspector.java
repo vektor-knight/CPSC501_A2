@@ -61,10 +61,14 @@ public class Inspector {
                 System.out.println("The parameter type(s) of this method: " + Arrays.toString(method.getParameterTypes()));
                 System.out.println("The exception type(s) of this method: " + Arrays.toString(method.getExceptionTypes()));
                 System.out.println("The return type(s) of this method: " + method.getReturnType());
-                System.out.println("The modifier(s) of this method: " + method.getModifiers());
+                System.out.println("The modifier(s) of this method: " + Modifier.toString(method.getModifiers()));
             }
         } else {
             System.out.println("Methods not found");
         }
     }
 }
+
+/**
+ * create methods for each thing i am returning, and return a String type
+ */
