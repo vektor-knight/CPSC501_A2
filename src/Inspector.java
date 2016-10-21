@@ -44,29 +44,7 @@ public class Inspector {
             }
         }
     }
-    
-    /**
-     * Gets the method names, exceptions, parameter types, return types, and modifiers
-     * of one class.
-     * How do you test void methods with side effects?
-     * @param obj
-     * @param classObj 
-    public void methodData(Object obj, Class classObj) {
-        // Get the methods
-        Method[] methods = classObj.getDeclaredMethods();
-        System.out.println("The methods of this class are: " + Arrays.toString(methods));
-        if (methods.length >= 1 ) { // If methods exist for a class object
-            for (Method method : methods) {
-                System.out.println("The parameter type(s) of this method: " + Arrays.toString(method.getParameterTypes()));
-                System.out.println("The exception type(s) of this method: " + Arrays.toString(method.getExceptionTypes()));
-                System.out.println("The return type(s) of this method: " + method.getReturnType());
-                System.out.println("The modifier(s) of this method: " + Modifier.toString(method.getModifiers()));
-            }
-        } else {
-            System.out.println("Methods not found");
-        }
-    } */
-    
+        
     /**
      * 
      * @param m
