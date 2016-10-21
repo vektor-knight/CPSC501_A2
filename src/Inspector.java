@@ -51,7 +51,6 @@ public class Inspector {
      * How do you test void methods with side effects?
      * @param obj
      * @param classObj 
-     */
     public void methodData(Object obj, Class classObj) {
         // Get the methods
         Method[] methods = classObj.getDeclaredMethods();
@@ -66,6 +65,53 @@ public class Inspector {
         } else {
             System.out.println("Methods not found");
         }
+    } */
+    
+    /**
+     * 
+     * @param m
+     * @return 
+     */
+    public String getParamTypes(Method m) {
+        Class[] params = m.getParameterTypes();
+        String result = null;
+        if (params.length == 0) return null;
+        else {
+            for (Class param : params) {
+                result += param.getSimpleName() + " ";
+            }
+        }
+        return result;
+    }
+    
+    /**
+     * 
+     * @param m
+     * @return 
+     */
+    public String getExceptions(Method m) {
+        Class[] excepts = m.getExceptionTypes();
+        String result = null;
+        if (excepts.length == 0) return null;
+        else {
+            for (Class except : excepts) {
+                result += except.getSimpleName() + " ";
+            }
+            return result;
+        }
+    }
+    
+    /**
+     * 
+     * @param m
+     * @return 
+     */
+    public Class<?> getReturnTypes(Method m) {
+        return m.getReturnType();
+    }
+    
+    public String getModifiers(Method m) {
+        return Modifier.toString(m.getModifiers());
     }
 }
 
